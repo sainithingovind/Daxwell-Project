@@ -56,7 +56,7 @@ python full_pipeline.py --source imdb --run-gbt --run-logreg --run-transformer -
 
 📊 Outputs
 
-reports/metrics.csv — consolidated performance report
+
 
 models/ — serialized classic models
 
