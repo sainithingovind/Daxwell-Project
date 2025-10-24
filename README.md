@@ -6,6 +6,10 @@ This project demonstrates a complete end-to-end NLP machine learning pipeline fo
 It includes both classic ML models (TF-IDF → GBT / LogReg / MLP) and a Transformer-based model (DistilBERT fine-tuning).
 All components are modular, reproducible, and designed with MLflow tracking for experiment management.
 
+<p align="center">
+  <img src="pipeline_overview.png" alt="Pipeline Architecture" width="85%">
+</p>
+
 ⚙️ Features
 
 Data ingestion from Hugging Face IMDB or CSV
@@ -41,13 +45,13 @@ pip install -r requirements.txt
 2️⃣ Run the classic models
 python full_pipeline.py --source imdb --run-gbt --run-logreg
 
-3️⃣ (Optional) Add MLP via SVD
+3️⃣ Add MLP via SVD
 python full_pipeline.py --source imdb --run-mlp-svd --svd-components 256
 
-4️⃣ (Optional) Run Transformer
+4️⃣ Run Transformer
 python full_pipeline.py --source imdb --run-transformer --transformer-samples 4000 --transformer-epochs 1
 
-5️⃣ (Optional) Enable MLflow logging
+5️⃣Enable MLflow logging
 python full_pipeline.py --source imdb --run-gbt --run-logreg --run-transformer --use-mlflow
 
 📊 Outputs
